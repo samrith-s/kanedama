@@ -1,4 +1,4 @@
-# Welcome to MansaKata!
+# Welcome to our kata!
 
 Hi! This project aims to test candidates applying for a position in our **engineering squad**. 
 We encountered a scenario similar to this one during our 1st release and we're curious to see your approach to this problem. 
