@@ -7,7 +7,7 @@ We need you to :
 
  1. Find the **average income** for the **6 months** prior to the *most recent transaction*
  2. Find the **Min** and **Max** balance of the *test user* accounts whole history
- 3. Check if each user have at least **3 years of activity**
+ 3. Check if each user have at least **3 years of transaction history**
 
 
 We set up a minimal REST API with 3 endpoint :
