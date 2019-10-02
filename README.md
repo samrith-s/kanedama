@@ -31,6 +31,6 @@ You will receive some more instructions when you find the correct answer.
 
 Good luck and have fun !
 
-*For any question, feel free to open an issue.*
+*For any question, feel free to send me an email at remy.tinco '@' getmansa.com.*
 
 
