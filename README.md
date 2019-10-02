@@ -5,9 +5,9 @@ We encountered a scenario similar to this one during our 1st release and we're c
 
 We need you to : 
 
- 1. Find the **average income** for the **6 months** prior to the *most recent transaction*
- 2. Find the **Min** and **Max** balance of the *test user* accounts whole history
- 3. Check if each user have at least **3 years of transaction history**
+ 1. Find the **average monthly positive income** for the **6 months** prior to the *most recent transaction*
+ 2. Find the **Min** and **Max** balance of the *test user* accounts whole history (all accounts aggregated!)
+ 3. Check if each user have at least **3 years of transaction history** between the oldest and the most recent transaction
 
 
 We set up a minimal REST API with 3 endpoint :
