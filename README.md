@@ -3,12 +3,16 @@
 Hi! This project aims to test candidates applying for a position in our **engineering squad**. 
 We encountered a scenario similar to this one during our 1st release and we're curious to see your approach to this problem. 
 
+## Exercise
+
 We need you to : 
 
- 1. Find the **average monthly positive income** for the **6 months** prior to the *most recent transaction*
+ 1. Find the **average amount of positive transactions** for the **6 months** prior to the *most recent transaction*. To clarify, the formula is:  
+ Sum of positive transactions / Number of positive transactions
  2. Find the **Min** and **Max** balance of the *test user* accounts whole history (all accounts aggregated!)
  3. Check if each user have at least **3 years of transaction history** between the oldest and the most recent transaction
 
+## API
 
 We set up a minimal REST API with 3 endpoint :
 
@@ -23,14 +27,14 @@ Root endpoint is : https://kata.getmansa.com/
 
 You can find the *Data Transfer Object* (DTO) for the answer object in the src/dto folder of this repo. You will also find *Response Objects* (RO) for the accounts and the transactions in the src/ro folder.
 
-**Your code must be written in TypeScript**
+## Project
 
-We want you to write code that meets the highest industry standard. It must be fast, robust, readable, and you need to include tests as well.
+**Your project must be written in TypeScript**
 
-You will receive some more instructions when you find the correct answer.
+**You have full control over the project structure**
+
+We want you to write code that meets the highest industry standard. It must be **fast**, **robust**, **readable**, and you need to **include tests** as well.
 
 Good luck and have fun !
 
 *For any question, feel free to send me an email at remy.tinco '@' getmansa.com.*
-
-
