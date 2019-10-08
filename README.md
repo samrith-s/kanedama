@@ -10,7 +10,7 @@ We need you to :
  1. Find the **average amount of positive transactions** for the **6 months** prior to the *most recent transaction*. To clarify, the formula is:  
  Sum of positive transactions / Number of positive transactions
  2. Find the **Min** and **Max** balance of the *test user* accounts whole history (all accounts aggregated!)
- 3. Check if each user have at least **3 years of transaction history** between the oldest and the most recent transaction
+ 3. Check if the user have at least **3 years of transaction history** between the oldest and the most recent transaction (all accounts aggregated!)
 
 ## API
 
