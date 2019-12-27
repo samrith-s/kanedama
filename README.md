@@ -34,6 +34,8 @@ You can find the *Data Transfer Object* (DTO) for the answer object in the `src/
 
 - **Your project must expose a `GET /answer` endpoint responding with an `AnswerDto` object**
 
+- **Our `POST /answer` endpoint is here to verify your solution. If it's right, you'll get access code and instructions for the next step**
+
 We want you to write code that meets the highest industry standard. It must be **fast**, **robust**, **readable**, and you need to **include tests** as well.
 
 Good luck and have fun!
