@@ -11,7 +11,8 @@
     "baseUrl": "./src",
     "incremental": true,
     "paths": {
-      "@kanedama/common": [ "common" ]
+      "@kanedama/common": ["common"],
+      "@kanedama/app": ["app"]
     }
   },
   "exclude": ["node_modules", "dist"]
