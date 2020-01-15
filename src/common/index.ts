@@ -1,3 +1,3 @@
-export { AnswerDto } from './dto/answer.dto';
-export { AccountRo } from './ro/account.ro';
-export { TransactionRo } from './ro/transaction.ro';
+export { AnswerDto } from './dtos/answer.dto';
+export { AccountDto } from './dtos/account.dto';
+export { TransactionDto } from './dtos/transaction.dto';

@@ -1,4 +1,4 @@
-export interface TransactionRo {
+export interface TransactionDto {
   timestamp: string;
   transaction_type: string;
   transaction_category: string;
