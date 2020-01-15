@@ -2,7 +2,7 @@ import { NestApplication } from '@nestjs/core';
 import { Test, TestingModule } from '@nestjs/testing';
 import { HttpStatus } from '@nestjs/common';
 import * as request from 'supertest';
-import { AppModule } from '../src/app.module';
+import { AppModule } from '@kanedama/app';
 
 const REMOTE_ENDPOINT =
   process.env.REMOTE_ENDPOINT || 'https://kata.getmansa.com';
