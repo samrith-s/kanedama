@@ -37,7 +37,7 @@ describe('Kanedama', () => {
             '6_month_average_income': expect.any(Number),
             min_balance: expect.any(Number),
             max_balance: expect.any(Number),
-            '3_years_activity': expect.any(Number),
+            '3_years_activity': expect.any(Boolean),
           }),
         )
         .then(({ body: applicantAnswer }) =>
