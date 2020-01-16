@@ -1,15 +1,15 @@
 # Welcome to our kata!
 
-Hi! This project aims to test candidates applying for a position in our **engineering squad**. 
+Hi! This project aims to evaluate candidates applying for a position in our **engineering squad**. 
 We encountered a scenario similar to this one during our 1st release and we're curious to see your approach to this problem. 
 
 ## Exercise
 
-We need you to: 
+We expect you to: 
 
  1. Find the **average amount of positive transactions** for the **6 months** prior to the *most recent transaction*. To clarify, the formula is:  
- Sum of positive transactions / Number of positive transactions
- 2. Find the **Min** and **Max** balance of the *test user* accounts whole history (all accounts aggregated!)
+ Sum of positive transactions / Number of positive transactions. Round your result down.
+ 2. Find the **Min** and **Max** balance of the *test user* accounts whole history (all accounts aggregated!). Round your result down.
  3. Check if the user have at least **3 years of transaction history** between the oldest and the most recent transaction (all accounts aggregated!)
 
 ## API
@@ -41,3 +41,15 @@ We want you to write code that meets the highest industry standard. It must be *
 Good luck and have fun!
 
 *For any question, feel free to send me an email at remy.tinco '@' getmansa.com.*
+
+### Hints
+
+Here's the expected answer:
+```json
+{
+	"6_month_average_income": 407,
+	"3_years_activity": true,
+	"max_balance": 19540,
+	"min_balance": -4285
+}
+```
