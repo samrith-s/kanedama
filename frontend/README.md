@@ -6,13 +6,13 @@ Be sure to read **all** of this document carefully, and follow the guidelines wi
 
 We need you to create a business user interface where you can see :
 
-- Personal user informations
+- Personal user information
   - First & Last name
-- Business user informations
+- Business user 
   - SIRET
   - Starting date
   - Address (Ex: 10 Rue Gabriel Peri 92120 Montrouge)
-- Financial informations
+- Financial information
   - Account type {TRANSACTION / SAVINGS}
   - Current balance
 
