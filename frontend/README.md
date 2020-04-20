@@ -109,9 +109,9 @@ Here's what you should strive for:
 
 ## :godmode: About Mansa
 
-Our purpose is to make independent workers spend less time on bureaucracies and more time using their money consciously, with less interest and more time. For this we are developing a platform that involves the entire product chain and we aim to become leaders in credit services in Europe.
+At Mansa, we are on a mission to make independent workers spend less time on bureaucracies and more time using their money consciously, giving them access to loans with lower interest rates and longer term. To achieve this, we are developing a platform that involves the entire product chain and we aim to become leaders in credit services in Europe.
 
-To face this challenge, we need people who believe in the impact of our business on the country's economy. More than that, we want to work with people who are not content with the obvious, who participate, without being afraid of making mistakes and learning, and who inspire, with ideas to simplify people's routine. So, let's make it easy with us?
+To face this challenge, we need people who believe in the impact of our business on one country's economy. More than that, we want to work with people who are not content with the obvious, who participate, without being afraid of making mistakes and learning, and who inspire others, with ideas to simplify people's routine.
 
 Good luck! :boom:
 
@@ -130,7 +130,7 @@ For example, if you don't know which attribute you should list on the homepage c
 
 > Can I have some extra time to add more features ?
 
-Adding extra features is great, and we will look at them as well, but the best thing you can do, if having extra time is to complete as much as you can the features that are requested already. For example, try adding tests or more documentation, we will value that more than having a user management module.
+Adding extra features is great and we will look at them as well. But the best thing you can do if you have extra time is to complete as much as you can the features that are requested already. For example, try adding tests or more documentation, we will value that more than having a user management module.
 
 > What if I have a question?
 
