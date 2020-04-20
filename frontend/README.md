@@ -109,7 +109,7 @@ Here's what you should strive for:
 
 ## :godmode: About Mansa
 
-At Mansa, we are on a mission to make independent workers spend less time on bureaucracies and more time using their money consciously, giving them access to loans with lower interest rates and longer term. To achieve this, we are developing a platform that involves the entire product chain and we aim to become leaders in credit services in Europe.
+At Mansa, we are on a mission to make freelancers workers spend less time on bureaucracies and more time using their money consciously, giving them access to loans with lower interest rates and longer term. To achieve this, we are developing a platform that involves the entire product chain and we aim to become leaders in credit services in Europe.
 
 To face this challenge, we need people who believe in the impact of our business on one country's economy. More than that, we want to work with people who are not content with the obvious, who participate, without being afraid of making mistakes and learning, and who inspire others, with ideas to simplify people's routine.
 
