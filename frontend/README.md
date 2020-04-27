@@ -102,7 +102,7 @@ Here's what you should strive for:
 
 - A bundled/archived repository showing your commit history or a link to an accessible private repository with your work in (Github can host personal private repositories for free). Git example for sending us a standalone bundle:
 
-        git bundle create <yourname>.bundle --all --branches
+        git bundle create <yourname>.bundle --all
 
 - A README.md file explaining the decisions you've made solving this task including technology and library choices.
 - Any instructions required to run your solution and tests in a unix environment.
