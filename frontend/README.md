@@ -64,7 +64,7 @@ For financial information, you'll use our custom API :
 Endpoint  | Data | Method
 ------------ | ------------- | ---------
 /accounts | Fetch all bank accounts from a *test user*. | [GET]
-/accounts/:account_id/transactions?from=*start_date*&to=*end_date* | Fetch the specified *account_id* transactions from the *start_date* to the *end_date*. It can't return more than **365 days** of transactions. If there are no date specified, the oldest transaction will be returned. | [GET]
+/accounts/:account_id/transactions?from=*start_date*&to=*end_date* | Fetch the specified *account_id* transactions from the *start_date* to the *end_date*. Date are ISO 8601 UTC, so for example `2018-08-13T03:24:00`  It can't return more than **365 days** of transactions. If there are no date specified, the oldest transaction will be returned. | [GET]
 
 Root endpoint is : <https://kata.getmansa.com/>
 
