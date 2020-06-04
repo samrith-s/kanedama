@@ -8,7 +8,7 @@ We need you to create a business user interface where you can see :
 
 - Personal user information
   - First & Last name
-- Business user 
+- Business user
   - SIRET
   - Starting date
   - Address (Ex: 10 Rue Gabriel Peri 92120 Montrouge)
@@ -25,7 +25,7 @@ You will need to leverage an open API for business data to fill in the details a
 
 ### Tech stack
 
-At Mansa, we're big fans of React. Our stack consists of React (with hooks), TypeScript, XState, RxJS, Ramda, CSS in JS with Emotion. We are using  Jest for unit tests. We encourage you to solve the task in this stack, if you're comfortable with it. Solutions using React are mandatory. create-react-app is a standard option to create a new React project and you are free to use it if you choose to.
+At Mansa, we're big fans of React. Our stack consists of React (with hooks), TypeScript, XState, RxJS, Ramda, CSS in JS with Emotion. We are using Jest for unit tests. We encourage you to solve the task in this stack, if you're comfortable with it. Solutions using React are mandatory. create-react-app is a standard option to create a new React project and you are free to use it if you choose to.
 
 You're also free to use a component library to get you started and any other package that you find required.
 
@@ -61,10 +61,10 @@ You can choose any Siren you want for your test.
 
 For financial information, you'll use our custom API :
 
-Endpoint  | Data | Method
------------- | ------------- | ---------
-/accounts | Fetch all bank accounts from a *test user*. | [GET]
-/accounts/:account_id/transactions?from=*start_date*&to=*end_date* | Fetch the specified *account_id* transactions from the *start_date* to the *end_date*. Date are ISO 8601 UTC, so for example `2018-08-13T03:24:00`  It can't return more than **365 days** of transactions. If there are no date specified, the oldest transaction will be returned. | [GET]
+| Endpoint                                                            | Data                                                                                                                                                                                                                                                                                | Method |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| /accounts                                                           | Fetch all bank accounts from a _test user_.                                                                                                                                                                                                                                         | [GET]  |
+| /accounts/:account*id/transactions?from=\_start_date*&to=_end_date_ | Fetch the specified _account_id_ transactions from the _start_date_ to the _end_date_. Date are ISO 8601 UTC, so for example `2018-08-13T03:24:00` It can't return more than **365 days** of transactions. If there are no date specified, the oldest transaction will be returned. | [GET]  |
 
 Root endpoint is : <https://kata.getmansa.com/>
 
@@ -84,6 +84,15 @@ You can see our backend readme test if you want more information about this endp
 - Complete user information (Profil picture, phone number, etc ...) with another API like [randomuser](https://randomuser.me)
 - Describe optimization opportunities when you conclude
 
+### Design
+
+At first I was very relunctant to write this section because I want to give you some freedom on how design this test. But since there is so much people asking me for insight I provide you some draft of design you can do.
+Feel free to make something different and/or improve it !
+
+![Design Draft1](./draft1.png)
+
+![Design Draft1](./draft2.png)
+
 ## What We Care About
 
 Use any libraries that you would normally use if this were a real production App. Please note: we're interested in your code & the way you solve the problem, not how well you can use a particular library or feature.
@@ -92,10 +101,10 @@ _We're interested in your method and how you approach the problem just as much a
 
 Here's what you should strive for:
 
-- Good use of current HTML, CSS, and JavaScript / Typescript  & performance best practices.
+- Good use of current HTML, CSS, and JavaScript / Typescript & performance best practices.
 - Solid testing approach.
 - A consistent architecture, focused on the simplicity of the project (** keep it simple! **)
-- Keep one CSS methodologies like BEM, SMACSS,  OOCSS, ITCSS or Atomic CSS.
+- Keep one CSS methodologies like BEM, SMACSS, OOCSS, ITCSS or Atomic CSS.
 - Extensible code.
 
 ## :gift: The Deliverable
