@@ -20,7 +20,7 @@ Endpoint  | Data | Method
 ------------ | ------------- | ---------
 /accounts | Fetch all bank accounts from a *test user*. | [GET]
 /accounts/:account_id/transactions?from=*start_date*&to=*end_date* | Fetch the specified *account_id* transactions from the *start_date* to the *end_date*. Date are ISO 8601 UTC, so for example `2018-08-13T03:24:00` It can't return more than **365 days** of transactions. If there are no date specified, the oldest transaction will be returned. | [GET]
-/answer | Post your results in the body, the body needs to be of type AnswerDto. Every number needs to be rounded to the minimum. | [POST]
+/answer | Post your results in the body, the body needs to be of type AnswerDto. Every number needs to be rounded to the minimum. Json Content-type please :) | [POST]
 
 Root endpoint is : https://kata.getmansa.com/
 
@@ -52,4 +52,9 @@ Here's the expected answer:
 	"max_balance": 19540,
 	"min_balance": -4285
 }
+```
+
+Here the corresponding cURL command : 
+```JSON
+curl -d '{"6_month_average_income": 407,"3_years_activity": true,"max_balance": 19540,"min_balance": -4285}' -H "Content-Type: application/json" -X POST https://kata.getmansa.com/answer
 ```
