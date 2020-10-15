@@ -1,4 +1,5 @@
 fastapi>=0.47
 pydantic>=1.2
+requests
 uvicorn
 black

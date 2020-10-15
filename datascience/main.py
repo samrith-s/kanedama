@@ -1,11 +1,18 @@
-from fastapi import FastAPI
-from typing import List
 from datetime import datetime
+from typing import List
+
+from fastapi import FastAPI
 from pydantic import BaseModel, validator
 
 
-class Account(BaseModel):
+class User(BaseModel):
     update_date: datetime
+    business_NAF_code: str
+    id: int
+
+
+class Account(BaseModel):
+    user_id: int
     balance: float
     id: int
 
@@ -17,14 +24,19 @@ class Transaction(BaseModel):
 
 
 class RequestPredict(BaseModel):
-    account: Account
+    user: User
+    accounts: List[Account]
     transactions: List[Transaction]
 
     @validator("transactions")
-    def validate_transaction_history(cls, v):
-        # validate that the transaction list passed has at least 6 months history
+    def validate_transaction_history(cls, v, *, values):
+        # validate that
+        # - the transaction list passed has at least 6 months history
+        # - no transaction is posterior to the user's update date
         if len(v) < 1:
             raise ValueError("Must have at least one Transaction")
+
+        update_t = values["user"].update_date
 
         oldest_t = v[0].date
         newest_t = v[0].date
@@ -34,28 +46,22 @@ class RequestPredict(BaseModel):
             if t.date > newest_t:
                 newest_t = t.date
 
-        assert (newest_t - oldest_t).days > 183, "Not Enough Transaction History"
+        assert (
+            update_t - newest_t
+        ).days >= 0, "Update Date Inconsistent With Transaction Dates"
+        assert (update_t - oldest_t).days > 183, "Not Enough Transaction History"
 
         return v
 
 
 class ResponsePredict(BaseModel):
-    account_id: int
+    user_id: int
     predicted_amount: float
 
 
-def preprocess_account(account: Account):
-    return account
-
-
-def preprocess_transactions(transactions: List[Transaction]):
-    return transactions
-
-
-def predict(transactions: List[Transaction], account: Account) -> float:
-    transactions = preprocess_transactions(transactions)
-    account = preprocess_account(account)
-
+def predict(
+    transactions: List[Transaction], accounts: List[Account], user: User
+) -> float:
     raise NotImplementedError()
 
 
@@ -65,11 +71,12 @@ app = FastAPI()
 @app.post("/predict")
 async def root(predict_body: RequestPredict):
     transactions = predict_body.transactions
-    account = predict_body.account
+    accounts = predict_body.accounts
+    user = predict_body.user
 
     # Call your prediction function/code here
     ####################################################
-    # predicted_amount = predict(transactions, account)
+    # predicted_amount = predict(transactions, accounts, user)
 
     # Return predicted amount along with account id
-    return {"account_id": account.id, "predicted_amount": 0}
+    return {"user_id": user.id, "predicted_amount": 0}
