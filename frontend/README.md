@@ -25,7 +25,7 @@ You will need to leverage an open API for business data to fill in the details a
 
 ### Tech stack
 
-At Mansa, we're big fans of React. Our stack consists of TypeScript, React.js, Next.Js, SCSS with styled-component, Flex & Grid, Cypress. We encourage you to solve the task in this stack, if you're comfortable with it. At least, solutions using React are mandatory. create-react-app is a standard option to create a new React project and you are free to use it if you choose to.
+At Mansa, we're big fans of React. Our stack consists of TypeScript, React.js, Next.Js, CSS-in-JS with styled-component, Flex & Grid, Cypress. We encourage you to solve the task in this stack, if you're comfortable with it. At least, solutions using React are mandatory. create-react-app is a standard option to create a new React project and you are free to use it if you choose to.
 
 You're also free to use a component library to get you started and any other package that you find required.
 
