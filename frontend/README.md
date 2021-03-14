@@ -25,14 +25,15 @@ You will need to leverage an open API for business data to fill in the details a
 
 ### Tech stack
 
-At Mansa, we're big fans of React. Our stack consists of React (with hooks), TypeScript, XState, RxJS, Ramda, CSS in JS with Emotion. We are using Jest for unit tests. We encourage you to solve the task in this stack, if you're comfortable with it. Solutions using React are mandatory. create-react-app is a standard option to create a new React project and you are free to use it if you choose to.
+At Mansa, we're big fans of React. Our stack consists of TypeScript, React.js, Next.Js, SCSS with styled-component, Flex & Grid, Cypress. We encourage you to solve the task in this stack, if you're comfortable with it. At least, solutions using React are mandatory. create-react-app is a standard option to create a new React project and you are free to use it if you choose to.
 
 You're also free to use a component library to get you started and any other package that you find required.
 
 Static type checking is a great way to introduce additional level of safety into your code and we welcome solutions written in TypeScript, but javascript is good too.
 
 Despite the above stack, we accept answers using different choices of libraries as long as you keep React.js.
-The use of component libraries, like Material UI, might make this easier for you and is encouraged. Feel free to use a js chart library if you want too.
+The use of component libraries, like Material UI, might make this easier for you and is encouraged but keep in mind that using it means we have less code to assess your knowledge. 
+Feel free to use a js chart library if you want too.
 
 We like to write clean code using proper programming patterns and JavaScript / Typescript best practices and expect you to strive to do the same.
 
@@ -42,7 +43,7 @@ Remarks:
 
 - Use es6 or later, do not use es5.
 - Do **not** use jquery.
-- Use vanilla css or sass / scss (compile to css via webpack loader).
+- Use vanilla css or CSS-in-JS.
 
 ### SIREN Api
 
