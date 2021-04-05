@@ -6,6 +6,9 @@ module.exports = {
             fontFamily: {
                 sans: ['Assistant', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
             },
+            colors: {
+                primary: 'rgb(99, 71, 209)',
+            },
         },
     },
     variants: {
