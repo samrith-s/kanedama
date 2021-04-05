@@ -1,0 +1,22 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "env": {
+        "node": true,
+        "es6": true,
+        "browser": true
+    },
+    "extends": ["eslint:recommended", "prettier"],
+    "plugins": [
+        "@typescript-eslint",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:jsx-a11y/recommended",
+        "import",
+        "prettier"
+    ],
+    "rules": {
+        "react/prop-types": "off"
+    }
+}
