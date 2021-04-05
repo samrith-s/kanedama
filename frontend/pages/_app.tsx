@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import 'tailwindcss/tailwind.css';
 
+import { Container } from '../components/Container';
+import { Header } from '../components/Header';
+
 const GlobalStyles = createGlobalStyle`
   html, body, #__next {
     margin: 0;
@@ -16,7 +19,10 @@ export default function App({ Component, pageProps }) {
     return (
         <>
             <GlobalStyles />
-            <Component {...pageProps} />
+            <Container>
+                <Header />
+                <Component {...pageProps} />
+            </Container>
         </>
     );
 }

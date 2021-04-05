@@ -25,6 +25,7 @@ class MyDocument extends Document {
                             href='https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap'
                         />
                     </noscript>
+                    <meta name='viewport' content='initial-scale=1.0, width=device-width' />
                 </Head>
                 <body className='font-sans'>
                     <Main />

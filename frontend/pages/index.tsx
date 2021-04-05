@@ -1,11 +1,5 @@
-import { Container } from '../components/Container';
-import { Header } from '../components/Header';
+import { Layout } from '../components/Layout';
 
 export default function Home() {
-    return (
-        <Container>
-            <Header />
-            <div>Content!</div>
-        </Container>
-    );
+    return <Layout title='Profile'>Home content!</Layout>;
 }
