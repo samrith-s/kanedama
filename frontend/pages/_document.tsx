@@ -14,7 +14,6 @@ class MyDocument extends Document {
                     <link rel='icon' type='image/png' sizes='32x32' href='/favicon.png' />
                     <link rel='icon' type='image/png' sizes='16x16' href='/favicon.png' />
                     <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true' />
-                    <title>Mansa - Dashboard</title>
                     <link
                         rel='preload'
                         as='style'
