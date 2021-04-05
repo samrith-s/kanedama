@@ -8,7 +8,7 @@ export interface LayoutProps {
 
 export function Layout({ children, title }: LayoutProps) {
     return (
-        <section>
+        <section className='p-4'>
             <Head>
                 <title>{title} - Mansa</title>
             </Head>
