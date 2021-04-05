@@ -11,4 +11,5 @@ export const Container = tw(StyledContainer)`
     grid-cols-1
     mx-auto 
     min-h-full
+    divide-y
 `;
