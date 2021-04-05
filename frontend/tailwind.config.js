@@ -12,7 +12,11 @@ module.exports = {
         },
     },
     variants: {
-        extend: {},
+        extend: {
+            ringWidth: ['active', 'hover'],
+            ringColor: ['active', 'hover'],
+            ringOpacity: ['active', 'hover'],
+        },
     },
     plugins: [],
 };

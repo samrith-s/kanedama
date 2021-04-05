@@ -10,5 +10,15 @@ export const Button = tw.button`
     rounded
     outline-none
     transition
-    hover:bg-purple-800
+
+    active:outline-none
+    focus:outline-none
+    hover:outline-none
+
+    active:ring-4
+    active:ring-primary
+    active:ring-opacity-25
+    hover:ring
+    hover:ring-primary
+    hover:ring-opacity-25
 `;
