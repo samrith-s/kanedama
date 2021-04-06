@@ -12,4 +12,5 @@ export const Container = tw(StyledContainer)`
     mx-auto 
     min-h-full
     divide-y
+    px-4
 `;
