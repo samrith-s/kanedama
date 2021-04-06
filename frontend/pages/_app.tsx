@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import 'tailwindcss/tailwind.css';
 
-import { Container } from '../components/Container';
-import { Header } from '../components/Header';
+import { Container } from '~components/Container';
+import { Header } from '~components/Header';
 
 const GlobalStyles = createGlobalStyle`
   html, body, #__next {
