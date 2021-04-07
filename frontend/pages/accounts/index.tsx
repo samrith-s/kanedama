@@ -1,6 +1,27 @@
-import React from 'react';
 import { Layout } from '~components/Layout';
+import { getAccounts } from '~data/getAccounts';
+import { Account } from '~interfaces/accounts.decl';
 
-export default function Accounts() {
-    return <Layout title='Accounts'>This is accounts</Layout>;
+interface AccountsProps {
+    accounts: Account[] | null;
+}
+
+export default function Accounts({ accounts }: AccountsProps) {
+    return (
+        <Layout title='Accounts'>
+            <pre>
+                <code>{JSON.stringify(accounts, null, 4)}</code>
+            </pre>
+        </Layout>
+    );
+}
+
+export async function getStaticProps() {
+    const accounts = await getAccounts();
+
+    return {
+        props: {
+            accounts,
+        },
+    };
 }
