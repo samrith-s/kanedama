@@ -17,6 +17,10 @@ export interface User {
     dob: {
         date: string;
     };
+    id: {
+        name: string;
+        value: string;
+    };
     location: {
         street: {
             number: number;
