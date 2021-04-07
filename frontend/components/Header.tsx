@@ -1,30 +1,31 @@
-import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import tw from 'tailwind-styled-components';
+import tw, { styled } from 'twin.macro';
 
-const NavLink = tw.div`
-    inline-block
-    py-1
-    px-2
-    rounded
-    border
-    hover:ring-2
-    hover:ring-primary
-    hover:ring-opacity-25
-    active:ring-4
-    active:ring-primary
-    active:ring-opacity-25
-    cursor-pointer
+const NavLink = styled.div<{ selected?: boolean }>`
+    ${tw`
+        inline-block
+        py-1
+        px-2
+        rounded
+        border
+        hover:ring-2
+        hover:ring-primary
+        hover:ring-opacity-25
+        active:ring-4
+        active:ring-primary
+        active:ring-opacity-25
+        cursor-pointer
+    `}
 
     ${({ selected }) =>
         selected
-            ? `
+            ? tw`
         bg-primary
         text-white
         border-transparent
     `
-            : `
+            : tw`
         bg-transparent
         text-primary
         border-primary
