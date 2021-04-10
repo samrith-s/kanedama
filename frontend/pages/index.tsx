@@ -5,17 +5,20 @@ import { CardItem } from '~components/Card/CardItem';
 import { Grid } from '~components/Grid';
 import { Layout } from '~components/Layout';
 
+import { getBusinessInfo } from '~data/getBusinessInfo';
 import { getUser } from '~data/getUser';
 
+import { Business } from '~interfaces/business.decl';
 import { User } from '~interfaces/user.decl';
 
 interface HomeProps {
-    user: User;
+    user: User | null;
+    business: Business | null;
 }
 
-export default function Home({ user }: HomeProps) {
-    if (!user) {
-        return <>There was an error fetching this page</>;
+export default function Home({ user, business }: HomeProps) {
+    if (!user || !business) {
+        return <>There was an error fetching this user or business details.</>;
     }
 
     const { picture, name, id, registered, gender, dob, email, cell, phone, location } = user;
@@ -37,6 +40,16 @@ export default function Home({ user }: HomeProps) {
                 </div>
             </Grid>
             <Grid className='grid-cols-1'>
+                <Card title='Business information'>
+                    <CardItem
+                        label='Founder name'
+                        value={`${business.prenom_usuel} ${business.nom}`}
+                    />
+                    <CardItem label='SIREN' value={business.etablissement_siege.siren} />
+                    <CardItem label='SIRET' value={business.etablissement_siege.siret} />
+                    <CardItem label='Address' value={business.etablissement_siege.geo_adresse} />
+                </Card>
+
                 <Card title='Personal information'>
                     <CardItem label='Title' value={name.title} />
                     <CardItem label='First name' value={name.first} />
@@ -50,6 +63,7 @@ export default function Home({ user }: HomeProps) {
                         value={format(new Date(dob.date), 'dd/MM/yyyy')}
                     />
                 </Card>
+
                 <Card title='Contact information'>
                     <CardItem label='Email' value={email} />
                     <CardItem label='Mobile' value={cell} />
@@ -70,10 +84,12 @@ export default function Home({ user }: HomeProps) {
 
 export async function getStaticProps() {
     const user = await getUser();
+    const business = await getBusinessInfo();
 
     return {
         props: {
             user,
+            business,
         },
     };
 }
