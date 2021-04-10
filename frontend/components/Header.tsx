@@ -36,7 +36,7 @@ export function Header() {
     const router = useRouter();
 
     return (
-        <header className='container mx-auto flex items-center justify-between py-4'>
+        <header className='container mx-auto flex items-center justify-between p-4 sticky top-0 bg-white border-b border-gray-200'>
             <Link href='/'>
                 <a className='text-primary text-2xl font-bold'>
                     Mansa

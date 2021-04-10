@@ -8,7 +8,5 @@ export const Container = styled.main`
         grid-cols-1
         mx-auto 
         min-h-full
-        divide-y
-        px-4
     `}
 `;
