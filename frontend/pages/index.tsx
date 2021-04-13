@@ -1,4 +1,5 @@
 import { format } from 'date-fns';
+import { GetStaticProps } from 'next';
 
 import { Card } from '~components/Card';
 import { CardItem } from '~components/Card/CardItem';
@@ -82,7 +83,7 @@ export default function Home({ user, business }: HomeProps) {
     );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
     const user = await getUser();
     const business = await getBusinessInfo();
 
@@ -92,4 +93,4 @@ export async function getStaticProps() {
             business,
         },
     };
-}
+};
