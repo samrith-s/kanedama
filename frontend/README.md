@@ -1,34 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mansa - Frontend
 
-## Getting Started
+This project uses NextJS and is [deployed to Vercel](https://mansa-frontend.vercel.app/).
 
-First, run the development server:
+## Gotchas
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+-   After trying a few routes on the backend, there is no route for `/:accounts/:accountId` to fetch details for a particular account
+-   With the above assumption, the account details are passed to the individual account page in as a `base-64` encoded JSON string
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+For the design, it aims to be minimal yet informative. With the right use of colors and weights to emphasize on information, the design aims to provide the user information they require in the most clear and concise manner.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The entire app works on all screen sizes seamlessly. It is made responsive from wide screens, all the way down to mobile phones. The design uses CSS grids extensively to achieve the mentioned responsiveness.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Internally, I used Tailwind CSS in conjunction with Styled Components. This decision was made keeping in mind the ease of design and the room for extensibility and flexibility.
 
-## Learn More
+It uses `twin.macro` to provide us with errors on incorrect Tailwind class names.
 
-To learn more about Next.js, take a look at the following resources:
+## Performance
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The app heavily relies on `getStaticProps` and `getServerSideProps` to provide a lot of functionality:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-   Data fetching
+-   Filtering
+-   Searching
 
-## Deploy on Vercel
+I think it strikes a good balance between using Automatic Static Optimization and true Server Side Rendering.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+In the `/accounts/:accountId` page, the information needs to always be fetched on-demand per-request as it can have new data on every refresh.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+In the `/accounts` and the `/` pages, the information need not always be prefetched on-demand and can be rehydrated on the client side.
+
+## Tests
+
+The project is extensively covered by both integration and unit tests.
+
+The project aims to unit test individual functions which help in data fetching, but does integration tests on various use cases on entire pages.
+
+## Commands
+
+-   `yarn dev` -> Run in development mode
+-   `yarn build` -> Build for production
+-   `yarn test` -> Run test suites
+-   `yarn lint` -> Run lint checks
