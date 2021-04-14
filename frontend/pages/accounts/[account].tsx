@@ -91,19 +91,19 @@ export default function Account({
 }
 
 export const getServerSideProps: GetServerSideProps<AccountProps> = async (ctx) => {
-    if (!ctx.params?.account || !ctx.query.data) {
+    if (!ctx.params?.account) {
         return {
             notFound: true,
         };
     }
 
     const account = JSON.parse(
-        Buffer.from(ctx.query.data as string, 'base64').toString()
+        Buffer.from(ctx.params.account as string, 'base64').toString()
     ) as IAccount;
     const yearsData = getYears();
     const queryYear = parseInt((ctx.query?.year as string) || '', 10);
 
-    const transactions = await getTransactions(ctx.params.account as string, queryYear);
+    const transactions = await getTransactions(account.account_id, queryYear);
 
     return {
         props: {

@@ -36,11 +36,7 @@ export function AccountCard({ account }: AccountCardProps) {
     }, [currency]);
 
     return (
-        <Link
-            href={`/accounts/${account_id}?data=${Buffer.from(JSON.stringify(account)).toString(
-                'base64'
-            )}`}
-        >
+        <Link href={`/accounts/${Buffer.from(JSON.stringify(account)).toString('base64')}`}>
             <a>
                 <Card className={cardClasses}>
                     <AccountBadge accountType={account_type}>{account_type}</AccountBadge>
