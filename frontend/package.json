@@ -6,7 +6,9 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "test": "jest"
+        "test": "jest",
+        "cypress": "cypress run",
+        "cypress:open": "cypress open"
     },
     "dependencies": {
         "currency-list": "1.0.6",
@@ -32,6 +34,7 @@
         "babel-plugin-macros": "3.0.1",
         "babel-plugin-styled-components": "1.12.0",
         "babel-plugin-twin": "1.0.2",
+        "cypress": "7.1.0",
         "eslint": "7.23.0",
         "eslint-config-prettier": "8.1.0",
         "eslint-plugin-import": "2.22.1",

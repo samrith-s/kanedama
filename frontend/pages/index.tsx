@@ -29,19 +29,19 @@ export default function Home({ user, business }: HomeProps) {
             <Grid columns='max-content auto' className='items-center'>
                 <img src={picture.large} className='border border-gray-200 rounded' width='75px' />
                 <div>
-                    <h2 className='text-lg font-bold'>
+                    <h2 className='text-lg font-bold' data-testid='user-name'>
                         {name.title}. {name.first} {name.last}
                     </h2>
-                    <p className='text-gray-400 text-sm font-bold'>
+                    <p className='text-gray-400 text-sm font-bold' data-testid='user-id'>
                         {id.name} {id.value}
                     </p>
-                    <p className='text-gray-500 text-sm'>
+                    <p className='text-gray-500 text-sm' data-testid='user-since'>
                         Member since {format(new Date(registered.date), 'dd/MM/yyyy')}
                     </p>
                 </div>
             </Grid>
             <Grid className='grid-cols-1'>
-                <Card title='Business information'>
+                <Card title='Business information' data-testid='business-info'>
                     <CardItem
                         label='Founder name'
                         value={`${business.prenom_usuel} ${business.nom}`}
@@ -51,7 +51,7 @@ export default function Home({ user, business }: HomeProps) {
                     <CardItem label='Address' value={business.etablissement_siege.geo_adresse} />
                 </Card>
 
-                <Card title='Personal information'>
+                <Card title='Personal information' data-testid='personal-info'>
                     <CardItem label='Title' value={name.title} />
                     <CardItem label='First name' value={name.first} />
                     <CardItem label='Last name' value={name.last} />
@@ -65,7 +65,7 @@ export default function Home({ user, business }: HomeProps) {
                     />
                 </Card>
 
-                <Card title='Contact information'>
+                <Card title='Contact information' data-testid='contact-info'>
                     <CardItem label='Email' value={email} />
                     <CardItem label='Mobile' value={cell} />
                     <CardItem label='Telephone' value={phone} />
