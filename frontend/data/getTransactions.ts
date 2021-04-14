@@ -22,12 +22,15 @@ export async function getTransactions(accountId: string, year?: number): Promise
         `https://kata.getmansa.com/accounts/${accountId}/transactions?from=${from}&to=${to}`
     )
         .then((res) => res.json())
-        .then((data) => {
-            if (data.error) {
+        .then((data: Transaction[]) => {
+            if ((data as any).error) {
                 throw data;
             }
 
-            return data;
+            return data.map((transaction) => {
+                transaction.timestamp = transaction.timestamp.replace(/\s+/, 'T');
+                return transaction;
+            });
         })
         .catch((error) => {
             console.error(error);

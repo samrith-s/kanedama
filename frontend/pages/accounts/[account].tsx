@@ -101,7 +101,6 @@ export const getServerSideProps: GetServerSideProps<AccountProps> = async (ctx) 
     const queryYear = parseInt((ctx.query?.year as string) || '', 10);
 
     const transactions = await getTransactions(ctx.params.account as string, queryYear);
-    console.log('transactions', queryYear, transactions);
 
     return {
         props: {
