@@ -65,7 +65,7 @@ export default function Account({
                         data-testid='account-type'
                     />
                 </Card>
-                <Select defaultValue={year} onChange={handleChange}>
+                <Select defaultValue={year} onChange={handleChange} data-testid='year'>
                     {years.map((year) => (
                         <option key={year} value={year}>
                             {year}
@@ -74,7 +74,12 @@ export default function Account({
                 </Select>
                 <Grid grid-cols-1>
                     <div className='text-lg font-bold flex items-center justify-between'>
-                        <span className='text-lg font-bold w-full'>Transactions for {year}</span>
+                        <span
+                            className='text-lg font-bold w-full'
+                            data-testid='transactions-header'
+                        >
+                            Transactions for {year}
+                        </span>
                         <span className='text-gray-400 text-sm font-normal flex-shrink-0'>
                             {transactionLength} transactions
                         </span>

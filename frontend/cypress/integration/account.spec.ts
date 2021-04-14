@@ -16,4 +16,34 @@ describe('accounts', () => {
         cy.get('[data-testid=swift]').should('have.length', 2);
         cy.get('[data-testid=account-type]').should('have.length', 2);
     });
+
+    it('should show transactions for current year', () => {
+        const currentYear = new Date().getFullYear();
+        cy.get('[data-testid=year]').should('have.value', currentYear);
+        cy.get('[data-testid=transactions-header]').should(
+            'contain.text',
+            `Transactions for ${currentYear}`
+        );
+    });
+
+    it('should change year on selection', () => {
+        const previousYear = new Date().getFullYear() - 1;
+        cy.get('[data-testid=year]').select(previousYear.toString());
+        cy.location('search').should('contain', `year=${previousYear}`);
+        cy.get('[data-testid=year]').should('have.value', previousYear);
+        cy.get('[data-testid=transactions-header]').should(
+            'contain.text',
+            `Transactions for ${previousYear}`
+        );
+    });
+
+    it('should preload values if year query parameter is present', () => {
+        const previousYear = new Date().getFullYear() - 1;
+        cy.visit(VISIT_URL + `?year=${previousYear}`);
+        cy.get('[data-testid=year]').should('have.value', previousYear);
+        cy.get('[data-testid=transactions-header]').should(
+            'contain.text',
+            `Transactions for ${previousYear}`
+        );
+    });
 });
