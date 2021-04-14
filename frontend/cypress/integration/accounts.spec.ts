@@ -2,7 +2,7 @@ describe('route: /accounts', () => {
     it('should render the accounts page', () => {
         cy.visit('/accounts');
         cy.get('[data-testid=accounts-input]').should('exist');
-        cy.get('[data-testid=account-card]').its('length').should('be.gt', 0);
+        cy.get('[data-testid=account-card]').should('have.length.gt', 0);
     });
 
     it('should prefill input on search', () => {

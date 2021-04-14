@@ -1,6 +1,9 @@
 describe('route: /', () => {
-    it('should render the home page', () => {
+    before(() => {
         cy.visit('/');
+    });
+
+    it('should render the home page', () => {
         cy.get('[data-testid=user-name').should('exist').and('contain.text', 'Mr. Joris Caron');
         cy.get('[data-testid=user-id')
             .should('exist')
@@ -11,17 +14,14 @@ describe('route: /', () => {
     });
 
     it('renders business info block', () => {
-        cy.visit('/');
         cy.get('[data-testid=business-info]').should('exist');
     });
 
     it('renders personal info block', () => {
-        cy.visit('/');
         cy.get('[data-testid=personal-info]').should('exist');
     });
 
     it('renders contact info block', () => {
-        cy.visit('/');
         cy.get('[data-testid=contact-info]').should('exist');
     });
 });
