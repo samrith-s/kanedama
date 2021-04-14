@@ -49,13 +49,21 @@ export default function Account({
 
     return (
         <Layout title={`${account.account_number} - View account`}>
-            <Grid className='grid-cols-1'>
+            <Grid className='grid-cols-1' data-testid='accounts-page'>
                 <Link href='/accounts'>&larr; Back to accounts</Link>
                 <Card title='Account information'>
-                    <CardItem label='Account number' value={account.account_number} />
-                    <CardItem label='IBAN' value={account.iban} />
-                    <CardItem label='SWIFT/BIC' value={account.swift_bic} />
-                    <CardItem label='Account Type' value={account.account_type} />
+                    <CardItem
+                        label='Account number'
+                        value={account.account_number}
+                        data-testid='account-number'
+                    />
+                    <CardItem label='IBAN' value={account.iban} data-testid='iban' />
+                    <CardItem label='SWIFT/BIC' value={account.swift_bic} data-testid='swift' />
+                    <CardItem
+                        label='Account Type'
+                        value={account.account_type}
+                        data-testid='account-type'
+                    />
                 </Card>
                 <Select defaultValue={year} onChange={handleChange}>
                     {years.map((year) => (
