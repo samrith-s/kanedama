@@ -38,7 +38,7 @@ export function Header() {
     return (
         <header className='container mx-auto flex items-center justify-between p-4 sticky top-0 bg-white border-b border-gray-200'>
             <Link href='/'>
-                <a className='text-primary text-2xl font-bold'>
+                <a className='text-primary text-2xl font-bold' data-testid='logo'>
                     Mansa
                     <span className='text-red-600'>.</span>
                 </a>
@@ -46,7 +46,7 @@ export function Header() {
             <nav>
                 <NavLink selected={router.pathname.includes('/accounts')}>
                     <Link href='/accounts'>
-                        <a>Accounts</a>
+                        <a data-testid='nav-accounts'>Accounts</a>
                     </Link>
                 </NavLink>
             </nav>
