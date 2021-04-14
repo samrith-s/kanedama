@@ -33,9 +33,11 @@ In the `/accounts` and the `/` pages, the information need not always be prefetc
 
 ## Tests
 
-The project is extensively covered by both integration and unit tests.
+The project is extensively covered by both integration and unit tests. All the main features are tested end-to-end.
 
 The project aims to unit test individual functions which help in data fetching, but does integration tests on various use cases on entire pages.
+
+I used a combination of Jest and Cypress to achieve a good balance between these two types of tests.
 
 ## Commands
 
