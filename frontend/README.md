@@ -39,9 +39,13 @@ The project aims to unit test individual functions which help in data fetching, 
 
 I used a combination of Jest and Cypress to achieve a good balance between these two types of tests.
 
+\*Note:\*\* To run the Cypress tests, you will first need to run the server using `yarn dev`.
+
 ## Commands
 
 -   `yarn dev` -> Run in development mode
 -   `yarn build` -> Build for production
--   `yarn test` -> Run test suites
+-   `yarn test` -> Run Jest test suites
+-   `yarn cypress` -> Run Cypress E2E tests
+-   `yarn cypress:open` -> Open Cypress dashboard
 -   `yarn lint` -> Run lint checks
