@@ -7,6 +7,16 @@ This project uses NextJS and is [deployed to Vercel](https://mansa-frontend.verc
 -   After trying a few routes on the backend, there is no route for `/:accounts/:accountId` to fetch details for a particular account
 -   With the above assumption, the account details are passed to the individual account page in as a `base-64` encoded JSON string
 
+## Getting started
+
+To get up and running, simply run
+
+```
+yarn install
+```
+
+And that should take care of all dependency installations!
+
 ## Design
 
 For the design, it aims to be minimal yet informative. With the right use of colors and weights to emphasize on information, the design aims to provide the user information they require in the most clear and concise manner.
