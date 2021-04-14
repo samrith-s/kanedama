@@ -65,9 +65,12 @@ export default function Account({
                     ))}
                 </Select>
                 <Grid grid-cols-1>
-                    <h2 className='text-lg font-bold'>
-                        Transactions for {year} ({transactionLength})
-                    </h2>
+                    <div className='text-lg font-bold flex items-center justify-between'>
+                        <span className='text-lg font-bold w-full'>Transactions for {year}</span>
+                        <span className='text-gray-400 text-sm font-normal flex-shrink-0'>
+                            {transactionLength} transactions
+                        </span>
+                    </div>
                     {!transactionLength && (
                         <p className='text-center text-gray-400'>
                             No transactions found for {year}!
@@ -80,6 +83,7 @@ export default function Account({
                                 transaction={transaction}
                             />
                         ))}
+                    {!!transactionLength && <a href='#top'>&uarr; Back to top</a>}
                 </Grid>
             </Grid>
         </Layout>

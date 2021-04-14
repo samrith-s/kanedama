@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }) {
     return (
         <>
             <GlobalStyles />
+            <div id='top' />
             <Container>
                 <Header />
                 <Component {...pageProps} />
