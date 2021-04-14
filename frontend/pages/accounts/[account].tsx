@@ -52,11 +52,10 @@ export default function Account({
             <Grid className='grid-cols-1'>
                 <Link href='/accounts'>&larr; Back to accounts</Link>
                 <Card title='Account information'>
-                    <CardItem label='Account nuber' value={account.account_number} />
+                    <CardItem label='Account number' value={account.account_number} />
                     <CardItem label='IBAN' value={account.iban} />
                     <CardItem label='SWIFT/BIC' value={account.swift_bic} />
                     <CardItem label='Account Type' value={account.account_type} />
-                    <CardItem label='Account nuber' value={account.account_number} />
                 </Card>
                 <Select defaultValue={year} onChange={handleChange}>
                     {years.map((year) => (
