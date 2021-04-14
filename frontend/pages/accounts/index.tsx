@@ -38,9 +38,13 @@ export default function Accounts({ accounts }: AccountsProps) {
                     placeholder='Search by account number, type, IBAN, BIC or balance'
                     onChange={handleChange}
                     defaultValue={query.q || ''}
+                    data-testid='accounts-input'
                 />
                 {!resultsExist && (
-                    <Grid className='grid-cols-1 text-center text-gray-400'>
+                    <Grid
+                        className='grid-cols-1 text-center text-gray-400'
+                        data-testid='accounts-no-result'
+                    >
                         Sorry, no results found :(
                     </Grid>
                 )}

@@ -37,7 +37,7 @@ export function AccountCard({ account }: AccountCardProps) {
 
     return (
         <Link href={`/accounts/${Buffer.from(JSON.stringify(account)).toString('base64')}`}>
-            <a>
+            <a data-testid='account-card'>
                 <Card className={cardClasses}>
                     <AccountBadge accountType={account_type}>{account_type}</AccountBadge>
                     <p className='text-xl'>
